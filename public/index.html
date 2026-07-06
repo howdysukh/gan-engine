@@ -1,15 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gan Engine</title>
+
+    <title>Gan Engine Beta</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>🚀 Gan Engine</h1>
+<div class="container">
 
-    <p>Backend Connected Successfully.</p>
+    <header>
+
+        <h1>Think India</h1>
+        <h2 style="margin-top: -12px;">Stock Scanner</h2>
+
+        <p class="tagline">
+            Mathematical Market Monitoring
+        </p>
+
+<br>
+        <div class="beta-badge">
+            BETA v0.3
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+
+    <section class="search-card">
+
+        <h2>Analyze Market</h2>
+
+        <div class="search-box">
+
+            <input
+                id="stockInput"
+                type="text"
+                placeholder="Example: RELIANCE">
+
+            <button id="searchBtn">
+
+                Analyze
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <section id="loading" class="hidden">
+
+        <div class="loader"></div>
+
+        <p>Calculating mathematical levels...</p>
+
+    </section>
+
+
+    <!-- MARKET OVERVIEW -->
+
+    <div class="section-header hidden" id="marketHeading">
+
+        <h2>📊 Market Overview</h2>
+
+    </div>
+
+    <section id="marketCard" class="card hidden">
+
+        <div class="market-grid">
+
+            <div>
+
+                <span>Company</span>
+
+                <h3 id="company"></h3>
+
+            </div>
+
+            <div>
+
+                <span>Exchange</span>
+
+                <h3 id="exchange"></h3>
+
+            </div>
+
+            <div>
+
+                <span>Current Price</span>
+
+                <h3 id="currentPrice"></h3>
+
+            </div>
+
+            <div>
+
+                <span>Opening Price</span>
+
+                <h3 id="openingPrice"></h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GANN LEVELS -->
+
+    <section id="gannSection" class="hidden">
+
+        <div class="section-header">
+
+            <h2>🧮 Gann Levels</h2>
+
+            <button
+                id="notifyBtn"
+                class="notify-btn">
+
+                🔔 Remind Me
+
+            </button>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="gann-card">
+
+                <h3>45°</h3>
+
+                <p>
+
+                    <strong style="color:#2ecc71;">
+                        Support
+                    </strong>
+
+                    <span id="support45"></span>
+
+                </p>
+
+                <p>
+
+                    <strong style="color:#ff5c5c;">
+                        Resistance
+                    </strong>
+
+                    <span id="resistance45"></span>
+
+                </p>
+
+            </div>
+
+            <div class="gann-card">
+
+                <h3>90°</h3>
+
+                <p>
+
+                    <strong style="color:#2ecc71;">
+                        Support
+                    </strong>
+
+                    <span id="support90"></span>
+
+                </p>
+
+                <p>
+
+                    <strong style="color:#ff5c5c;">
+                        Resistance
+                    </strong>
+
+                    <span id="resistance90"></span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LIVE CHART -->
+
+    <section class="card">
+
+        <h2>📈 Live Market Chart</h2>
+
+        <div id="chartContainer">
+
+            <div class="placeholder">
+
+                📊
+
+                <br><br>
+
+                Search any NSE stock
+
+                <br>
+
+                to load the live TradingView chart.
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            ⚠️ Gan Engine does not predict future prices.
+
+            <br>
+
+            All values are mathematically calculated using
+            the day's opening price and Gann Square.
+
+        </p>
+
+        <br>
+
+        <hr>
+
+        <br>
+
+        <p>
+
+             Built with ❤️ by <strong>SUKH</strong>
+
+        </p>
+
+        <p>
+
+            Gan Engine Beta v0.3 | View <a href="https://github.com/howdysukh/gan-engine" style="color: aqua;">Github Releases</a> for more information
+
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
+
 </html>
