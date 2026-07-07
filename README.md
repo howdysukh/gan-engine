@@ -5,7 +5,7 @@
 ### *Mathematical Market Monitoring • Not Market Prediction*
 
 ![Status](https://img.shields.io/badge/Status-Development-blue?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v0.1-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-v0.3-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/PWA-Web%20Application-purple?style=for-the-badge)
 
