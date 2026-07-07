@@ -187,12 +187,12 @@ gan-engine/
 
 ## 🚧 Phase 1
 
-- [ ] Stock Search
-- [ ] Live Market Data
-- [ ] Opening Price Retrieval
-- [ ] Gann Square Engine
-- [ ] Support Calculation
-- [ ] Resistance Calculation
+- [X] Stock Search
+- [X] Live Market Data
+- [X] Opening Price Retrieval
+- [X] Gann Square Engine
+- [X] Support Calculation
+- [X] Resistance Calculation
 
 ---
 
