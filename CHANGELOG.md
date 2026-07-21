@@ -1,12 +1,46 @@
 # Changelog
 
-## v0.2.0 - Market Data Integration
-- Added stock search endpoint
-- Added live market data service
-- Displayed company name, current price, opening price, exchange, and last updated time
+All notable changes to Gan Engine are documented here.
 
-## v0.1.0 - Initial Deployment
-- Created Express server
-- Configured automatic deployment with Render
-- Added health API
-- Published first live release
+---
+
+## v0.5
+
+### Added
+
+- Dashboard
+- Google Authentication
+- Guest Authentication
+- JWT Authentication
+- Watchlists
+- Alerts
+- Live Scanner
+- Browser Notifications
+- Documentation Suite
+
+---
+
+## v0.4
+
+- Authentication
+- MongoDB
+- Passport.js
+
+---
+
+## v0.3
+
+- Gann Engine
+- Mathematical Calculations
+
+---
+
+## v0.2
+
+- Yahoo Finance Integration
+
+---
+
+## v0.1
+
+- Initial Project Setup

@@ -2,143 +2,195 @@
 
 # 📈 Gan Engine
 
-### *Mathematical Market Monitoring • Not Market Prediction*
+### Mathematical Market Monitoring Platform
 
-![Status](https://img.shields.io/badge/Status-Development-blue?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v0.3-green?style=for-the-badge)
+*"We don't predict the market. We monitor the mathematics behind it."*
+
+![Version](https://img.shields.io/badge/Version-v0.5-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active%20Development-blue?style=for-the-badge)
+![Node.js](https://img.shields.io/badge/Node.js-24.x-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge&logo=express)
 ![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
-![Platform](https://img.shields.io/badge/PWA-Web%20Application-purple?style=for-the-badge)
 
 ---
 
-## 🚀 Reducing Screen Fatigue for Investors Through Mathematical Market Monitoring
-
-*"We don't predict the market. We monitor the mathematics behind it."*
+### 🚀 Helping investors spend less time watching charts and more time making informed decisions.
 
 </div>
 
 ---
 
-# 📖 About
+# 📖 About Gan Engine
 
-**Gan Engine** is a **Progressive Web Application (PWA)** built to automate market monitoring using the **Gann Square of Nine** methodology.
+Gan Engine is a **Progressive Web Application (PWA)** designed to reduce screen fatigue for investors through **mathematical market monitoring**.
 
-Unlike traditional stock applications that attempt to predict future prices or generate trading signals, Gan Engine continuously monitors live market prices against mathematically calculated support and resistance levels derived from the day's opening price.
+Instead of predicting where prices will go, Gan Engine continuously monitors live market prices against mathematically calculated **Gann Square of Nine** support and resistance levels derived from the day's opening price.
 
-When significant mathematical levels are reached, the platform informs the investor, allowing them to make informed decisions without constantly watching charts.
+Whenever an important mathematical level is reached, users receive a notification—allowing them to focus on decision-making rather than constantly watching charts.
 
 ---
 
-# 🎯 Vision
+# 🎯 Project Vision
 
 > **Spend less time watching charts. Spend more time making informed decisions.**
 
-The objective of Gan Engine is to reduce:
+Gan Engine was created to solve a simple problem:
 
-- 📉 Screen Fatigue
-- 😰 Fear of Missing Out (FOMO)
-- ⏰ Endless Chart Watching
-- 📊 Manual Price Monitoring
+Investors often spend hours staring at live charts waiting for a price level to be reached.
 
-while maintaining complete transparency in every calculation.
+Gan Engine automates that monitoring process so users can focus on what matters while the application watches the market for them.
+
+---
+
+# ✨ Features
+
+## 🔐 Authentication
+
+- Google OAuth Login
+- Guest Login
+- JWT Authentication
+- Secure Session Management
+
+---
+
+## 📊 Market Monitoring
+
+- Live Stock Search
+- Real-Time Market Data
+- Gann Square of Nine Calculations
+- Support & Resistance Detection
+- Live Market Scanner
+
+---
+
+## ⭐ Portfolio Tools
+
+- Personal Watchlists
+- Custom Alerts
+- Browser Notifications
+- Dashboard Overview
+
+---
+
+## ⚙ Platform
+
+- Progressive Web Application (PWA)
+- Responsive Design
+- Modular Architecture
+- REST API Backend
 
 ---
 
 # ❌ What Gan Engine IS NOT
 
-Gan Engine **does not**
+Gan Engine does **not**
 
 - Predict future prices
-- Guarantee profits
-- Provide financial advice
-- Replace investor judgement
+- Recommend buying or selling securities
 - Execute trades automatically
-- Promise buy/sell signals
+- Guarantee profits
+- Replace investor judgement
+- Provide financial advice
 
 ---
 
 # ✅ What Gan Engine DOES
 
-✔ Continuously monitors selected stocks
+Gan Engine continuously monitors live market prices against mathematically calculated Gann levels.
 
-✔ Calculates Gann Square of Nine support & resistance
+When important levels are reached, the platform immediately informs the user, allowing them to review the opportunity and make their own investment decisions.
 
-✔ Tracks live market prices
-
-✔ Notifies users when significant mathematical levels are reached
-
-✔ Helps investors reduce unnecessary screen time
+Every decision always remains with the investor.
 
 ---
 
 # 🧠 Core Philosophy
 
-> **The application never predicts future prices.**
+> **Monitoring, not prediction.**
 
-It continuously monitors live market prices against mathematically calculated **Gann Square of Nine** levels derived from the day's opening price and informs users when those levels are reached.
+Gan Engine believes that mathematics should assist investors—not replace them.
 
-Every investment decision remains entirely with the investor.
+The platform never attempts to forecast future market movements.
+
+Instead, it continuously observes mathematical price levels and provides timely notifications whenever those levels are reached.
 
 ---
 
-# ⚙️ How It Works
+# ⚙ How Gan Engine Works
 
 ```text
-Search Stock
-
-        │
-
-        ▼
-
-Fetch Live Market Data
-
-        │
-
-        ▼
-
-Today's Opening Price
-
-        │
-
-        ▼
-
-Gan Square of Nine Engine
-
-        │
-
-        ▼
-
-Calculate
-
-Support
-Resistance
-
-        │
-
-        ▼
-
-Monitor Live Price
-
-        │
-
-        ▼
-
-Notify User
+            Search Stock
+                  │
+                  ▼
+      Fetch Live Market Data
+                  │
+                  ▼
+       Today's Opening Price
+                  │
+                  ▼
+      Gann Square of Nine Engine
+                  │
+                  ▼
+Calculate Support & Resistance Levels
+                  │
+                  ▼
+        Monitor Live Price
+                  │
+                  ▼
+         Notify the Investor
 ```
 
 ---
 
-# 🏗️ Technology Stack
+# 🏗 Architecture
+
+```text
+                     Browser
+
+                        │
+
+                        ▼
+
+          Express.js Backend API
+
+          ┌─────────────┴─────────────┐
+
+          ▼                           ▼
+
+   MongoDB Atlas             Yahoo Finance API
+
+          ▼
+
+     Gan Engine Services
+
+          ▼
+
+ Mathematical Price Monitoring
+
+          ▼
+
+ Browser Notifications & Dashboard
+```
+
+---
+
+# 💻 Technology Stack
 
 | Layer | Technology |
 |--------|------------|
 | Frontend | HTML5 |
 | Styling | CSS3 |
-| Logic | JavaScript |
+| Programming | JavaScript (ES6+) |
 | Backend | Node.js |
 | Framework | Express.js |
+| Database | MongoDB Atlas |
+| ODM | Mongoose |
+| Authentication | Passport.js + Google OAuth |
+| Authorization | JWT |
+| Market Data | Yahoo Finance |
 | Deployment | Render |
-| Version Control | Git + GitHub |
+| Version Control | Git & GitHub |
 
 ---
 
@@ -146,124 +198,3 @@ Notify User
 
 ```text
 gan-engine/
-
-│
-
-├── public/
-
-│      index.html
-│      style.css
-│      script.js
-
-│
-
-├── routes/
-
-├── services/
-
-│      marketService.js
-│      gannService.js
-
-│
-
-├── server.js
-
-├── package.json
-
-└── README.md
-```
-
----
-
-# 🗺️ Development Roadmap
-
-## ✅ Phase 0
-
-- [x] Repository Created
-- [x] Development Environment
-- [x] Render Integration
-
----
-
-## 🚧 Phase 1
-
-- [X] Stock Search
-- [X] Live Market Data
-- [X] Opening Price Retrieval
-- [X] Gann Square Engine
-- [X] Support Calculation
-- [X] Resistance Calculation
-
----
-
-## ⏳ Phase 2
-
-- [ ] Distance Calculator
-- [ ] Percentage Toggle
-- [ ] Price Difference Toggle
-
----
-
-## ⏳ Phase 3
-
-- [ ] Watchlist
-- [ ] Background Monitoring
-- [ ] Push Notifications
-
----
-
-## ⏳ Phase 4
-
-- [ ] Progressive Web App
-- [ ] Install to Home Screen
-- [ ] Offline Support
-
----
-
-## ⏳ Phase 5
-
-- [ ] AI-assisted Notification Filtering
-- [ ] Smart Alert Prioritization
-- [ ] Market Insights
-
----
-
-# 🎯 Design Principles
-
-Every feature added to Gan Engine must satisfy the following principles.
-
-- Mathematics over speculation.
-- Transparency over black boxes.
-- Monitoring over prediction.
-- Simplicity over complexity.
-- Investors remain in control.
-
----
-
-# 📢 Disclaimer
-
-Gan Engine is a mathematical monitoring platform.
-
-It does **not** predict future prices, provide investment advice, recommend securities, or guarantee returns.
-
-Users are solely responsible for their own investment decisions.
-
----
-
-# 🤝 Contributing
-
-Contributions, suggestions, and improvements are always welcome.
-
-If you discover a bug or have an idea, feel free to open an Issue or submit a Pull Request.
-
----
-
-<div align="center">
-
-## ⭐ If you like this project, consider giving it a star!
-
-Built with ☕, Mathematics, and Curiosity.
-
-**© 2026 Gan Engine**
-
-</div>

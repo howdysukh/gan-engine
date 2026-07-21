@@ -104,24 +104,28 @@ const Auth = {
 
     async logout() {
 
-        try {
+    try {
 
-            await fetch(
-                "/api/auth/logout",
-                {
-                    credentials: "include"
-                }
-            );
+        const response = await fetch("/api/auth/logout", {
+            method: "GET",
+            credentials: "include"
+        });
 
-        } catch (err) {
-
-            console.error(err);
-
+        if (!response.ok) {
+            throw new Error("Logout failed");
         }
+
+        this.user = null;
 
         window.location.reload();
 
-    },
+    } catch (err) {
+
+        console.error(err);
+
+    }
+
+},
 
     // ===========================================
     // BUTTON EVENTS

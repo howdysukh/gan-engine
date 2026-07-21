@@ -13,3 +13,38 @@ npm-debug.log*
 
 # IDE
 .vscode/settings.json
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Coverage
+coverage/
+
+# Build
+dist/
+build/
+
+# Runtime
+tmp/
+temp/
+
+# Misc
+Thumbs.db

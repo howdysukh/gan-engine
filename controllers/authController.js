@@ -79,3 +79,17 @@ exports.googleLogin = async (req, res) => {
 
     res.redirect("/");
 };
+
+exports.logout = (req, res) => {
+
+    res.clearCookie("token", {
+        httpOnly: true,
+        sameSite: "lax"
+    });
+
+    res.json({
+        success: true,
+        message: "Logged out successfully."
+    });
+
+};

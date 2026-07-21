@@ -26,6 +26,8 @@ router.get(
 
 );
 
+router.get("/logout", authController.logout);
+
 router.get("/session", sessionController.session);
 
 module.exports = router;
