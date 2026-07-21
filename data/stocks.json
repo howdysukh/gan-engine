@@ -1,0 +1,52 @@
+[
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Limited",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys Limited",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Limited",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Limited",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Limited",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "Axis Bank",
+    "exchange": "NSE"
+  }
+]

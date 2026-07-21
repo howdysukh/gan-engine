@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const { getStock } = require("../services/marketProvider");
+const stockController = require("../controllers/stockController");
+
+router.get("/search", stockController.searchStocks);
 
 router.get("/:symbol", async (req, res) => {
 
