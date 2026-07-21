@@ -4,261 +4,868 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gan Engine Beta</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>GAN ENGINE</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 <body>
 
-<div class="container">
+<canvas id="backgroundCanvas"></canvas>
 
-    <header>
+<main class="app">
 
-        <h1>Think India</h1>
-        <h2 style="margin-top: -12px;">Financial Engineering</h2>
+    <!-- ========================================= -->
+    <!-- HEADER -->
+    <!-- ========================================= -->
 
-        <p class="tagline">
-            Mathematical Market Monitoring
-        </p>
+    <header class="header">
 
-<br>
-        <div class="beta-badge">
-            BETA v0.3
+        <div class="logo">
+
+            <h1>GAN ENGINE</h1>
+
+            <p>MATHEMATICAL MARKET MONITORING</p>
+
         </div>
 
     </header>
 
+    <!-- ========================================= -->
+    <!-- CONTENT -->
+    <!-- ========================================= -->
 
-    <!-- SEARCH -->
+    <section class="view-container">
 
-    <section class="search-card">
+        <!-- ========================================= -->
+        <!-- HOME -->
+        <!-- ========================================= -->
 
-        <h2>Analyze Market</h2>
+        <div
+            class="view active"
+            data-view="home"
+        >
 
-        <div class="search-box">
+            <div class="page">
 
-            <input
-                id="stockInput"
-                type="text"
-                placeholder="Example: RELIANCE">
+                <div class="page-header">
 
-            <button id="searchBtn">
+                    <h2 id="dashboardTitle">
 
-                Analyze
+                        Market Overview
 
-            </button>
+                    </h2>
+
+                    <p id="dashboardSubtitle">
+
+                        Checking your session...
+
+                    </p>
+
+                </div>
+
+                <!-- Logged In -->
+
+                <div class="dashboard-layout">
+
+                    <!-- =============================== -->
+                    <!-- Stats -->
+                    <!-- =============================== -->
+
+                    <div id="dashboardCards">
+
+                        <div class="card">
+
+                            <div class="card-title">
+
+                                WATCHLIST
+
+                            </div>
+
+                            <div
+                                class="card-value"
+                                id="watchlistCount"
+                            >
+
+                                0
+
+                            </div>
+
+                            <div class="card-subtitle">
+
+                                Stocks Tracked
+
+                            </div>
+
+                        </div>
+
+                        <div class="card">
+
+                            <div class="card-title">
+
+                                MARKET
+
+                            </div>
+
+                            <div
+                                class="card-value"
+                                id="marketStatus"
+                            >
+
+                                --
+
+                            </div>
+
+                            <div class="card-subtitle">
+
+                                Live Status
+
+                            </div>
+
+                        </div>
+
+                        <div class="card">
+
+                            <div class="card-title">
+
+                                ALERTS
+
+                            </div>
+
+                            <div
+                                class="card-value"
+                                id="alertCount"
+                            >
+
+                                0
+
+                            </div>
+
+                            <div class="card-subtitle">
+
+                                Active Alerts
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =============================== -->
+                    <!-- Scanner -->
+                    <!-- =============================== -->
+
+                    <section class="section">
+
+                        <h3 class="section-title">
+
+                            Live Scanner
+
+                        </h3>
+
+                        <div id="scannerGrid">
+
+                            <!-- JS injects cards here -->
+
+                        </div>
+
+                    </section>
+
+                    <!-- =============================== -->
+                    <!-- News -->
+                    <!-- =============================== -->
+
+                    <section class="section">
+
+                        <h3 class="section-title">
+
+                            Market News
+
+                        </h3>
+
+                        <div id="newsContainer">
+
+                            <div class="card">
+
+                                <div class="card-title">
+
+                                    COMING SOON
+
+                                </div>
+
+                                <div class="card-subtitle">
+
+                                    Live financial news integration
+                                    will be available in a future
+                                    update.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <!-- =============================== -->
+                <!-- Empty Dashboard -->
+                <!-- =============================== -->
+
+                <div
+                    id="dashboardEmpty"
+                    style="display:none;"
+                >
+
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            THE ENGINE IS READY
+
+                        </div>
+
+                        <div class="card-subtitle">
+
+                            Sign in with Google or continue as Guest
+                            to begin monitoring live market levels.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </section>
+        <!-- ========================================= -->
+<!-- WATCHLIST -->
+<!-- ========================================= -->
 
+<div
+    class="view"
+    data-view="watchlist"
+>
 
-    <!-- LOADING -->
+    <div class="page">
 
-    <section id="loading" class="hidden">
+        <div class="page-header">
 
-        <div class="loader"></div>
+            <h2>
 
-        <p>Calculating mathematical levels...</p>
+                Watchlist
 
-    </section>
+            </h2>
 
+            <p id="watchlistSubtitle">
 
-    <!-- MARKET OVERVIEW -->
+                Search, save and monitor your favourite stocks.
 
-    <div class="section-header hidden" id="marketHeading">
+            </p>
 
-        <h2>📊 Market Overview</h2>
+        </div>
+
+        <!-- Empty State -->
+
+        <div id="watchlistEmpty">
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    YOUR WATCHLIST IS EMPTY
+
+                </div>
+
+                <div class="card-subtitle">
+
+                    Search any NSE stock above and add it to your watchlist.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-container">
+
+            <div class="search-box">
+
+                <svg
+                    class="search-icon"
+                    viewBox="0 0 24 24"
+                >
+
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                    ></circle>
+
+                    <line
+                        x1="16.65"
+                        y1="16.65"
+                        x2="21"
+                        y2="21"
+                    ></line>
+
+                </svg>
+
+                <input
+                    id="stockSearch"
+                    type="text"
+                    placeholder="Search 2,000+ NSE stocks..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div id="searchResults"></div>
+
+        </div>
+
+        <!-- Watchlist -->
+
+        <div
+            id="watchlistContainer"
+            style="display:none;"
+        >
+
+        </div>
 
     </div>
 
-    <section id="marketCard" class="card hidden">
+</div>
 
-        <div class="market-grid">
+<!-- ========================================= -->
+<!-- ALERTS -->
+<!-- ========================================= -->
 
-            <div>
+<div
+    class="view"
+    data-view="alerts"
+>
 
-                <span>Company</span>
+    <div class="page">
 
-                <h3 id="company"></h3>
+        <div class="page-header">
 
-            </div>
+            <h2>
 
-            <div>
+                Alerts
 
-                <span>Exchange</span>
+            </h2>
 
-                <h3 id="exchange"></h3>
+            <p>
 
-            </div>
+                Price alerts created from Gan Engine.
 
-            <div>
+            </p>
 
-                <span>Current Price</span>
+        </div>
 
-                <h3 id="currentPrice"></h3>
+        <div id="alertsContainer">
 
-            </div>
+            <div class="card">
 
-            <div>
+                <div class="card-title">
 
-                <span>Opening Price</span>
+                    ACTIVE ALERTS
 
-                <h3 id="openingPrice"></h3>
+                </div>
+
+                <div class="card-subtitle">
+
+                    Alerts you've created will appear here.
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
-
-
-    <!-- GANN LEVELS -->
-
-    <section id="gannSection" class="hidden">
-
-        <div class="section-header">
-
-            <h2>🧮 Gann Levels</h2>
-
-            <button
-                id="notifyBtn"
-                class="notify-btn">
-
-                🔔 Remind Me
-
-            </button>
-
-        </div>
-
-        <div class="cards">
-
-            <div class="gann-card">
-
-                <h3>45°</h3>
-
-                <p>
-
-                    <strong style="color:#2ecc71;">
-                        Support
-                    </strong>
-
-                    <span id="support45"></span>
-
-                </p>
-
-                <p>
-
-                    <strong style="color:#ff5c5c;">
-                        Resistance
-                    </strong>
-
-                    <span id="resistance45"></span>
-
-                </p>
-
-            </div>
-
-            <div class="gann-card">
-
-                <h3>90°</h3>
-
-                <p>
-
-                    <strong style="color:#2ecc71;">
-                        Support
-                    </strong>
-
-                    <span id="support90"></span>
-
-                </p>
-
-                <p>
-
-                    <strong style="color:#ff5c5c;">
-                        Resistance
-                    </strong>
-
-                    <span id="resistance90"></span>
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- LIVE CHART -->
-
-    <section class="card">
-
-        <h2>📈 Live Market Chart</h2>
-
-        <div id="chartContainer">
-
-            <div class="placeholder">
-
-                📊
-
-                <br><br>
-
-                Search any NSE stock
-
-                <br>
-
-                to load the live TradingView chart.
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-
-            ⚠️ Gan Engine does not predict future prices.
-
-            <br>
-
-            All values are mathematically calculated using
-            the day's opening price and Gann Square.
-
-        </p>
-
-        <br>
-
-        <hr>
-
-        <br>
-
-        <p>
-
-             Built with ❤️ by <strong>SUKH</strong>
-
-        </p>
-
-        <p>
-
-            Gan Engine Beta v0.3 | View <a href="https://github.com/howdysukh/gan-engine" style="color: aqua;">Github Releases</a> for more information
-
-        </p>
-
-    </footer>
+    </div>
 
 </div>
 
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"> </script>
+<!-- ========================================= -->
+<!-- ACCOUNT -->
+<!-- ========================================= -->
+
+<div
+    class="view"
+    data-view="account"
+>
+
+    <div class="page">
+
+        <div class="page-header">
+
+            <h2>
+
+                Account
+
+            </h2>
+
+            <p>
+
+                Sign in to sync your watchlist, alerts and preferences.
+
+            </p>
+
+        </div>
+
+        <!-- Profile -->
+
+        <div class="card profile-card">
+
+            <img
+                id="avatar"
+                src="assets/avatar.svg"
+                alt="Avatar"
+                class="profile-avatar"
+            >
+
+            <h3 id="username">
+
+                Welcome
+
+            </h3>
+
+            <p id="email">
+
+                Sign in to unlock synchronization.
+
+            </p>
+
+            <div id="provider">
+
+            </div>
+
+            <div class="account-buttons">
+
+                <button
+                    id="googleLoginBtn"
+                    class="btn btn-primary"
+                >
+
+                    Continue with Google
+
+                </button>
+
+                <button
+                    id="guestLoginBtn"
+                    class="btn"
+                >
+
+                    Continue as Guest
+
+                </button>
+
+                <button
+                    id="logoutBtn"
+                    class="btn btn-danger"
+                >
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+
+                        <path d="M10 17l5-5-5-5"/>
+
+                        <path d="M15 12H3"/>
+
+                    </svg>
+
+                    <span>
+
+                        Sign Out
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- About -->
+
+        <div class="card about-card">
+
+            <div class="card-title">
+
+                ABOUT GAN ENGINE
+
+            </div>
+
+            <div class="card-subtitle">
+
+                Gan Engine continuously monitors live NSE market prices
+                using the mathematical principles of the
+                <strong>Gann Square of Nine.</strong>
+
+                <br><br>
+
+                It does <strong>not predict</strong> future prices.
+
+                Instead, it calculates significant mathematical support
+                and resistance levels, then monitors the market in
+                real time whenever those levels are reached.
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="account-footer">
+
+            <div class="footer-links">
+
+                <a href="#">
+
+                    Privacy Policy
+
+                </a>
+
+                <a href="#">
+
+                    Terms
+
+                </a>
+
+                <a href="#">
+
+                    About
+
+                </a>
+
+            </div>
+
+            <div class="footer-version">
+
+                Version 0.8
+
+            </div>
+
+            <div class="footer-copy">
+
+                © 2026 Gan Engine
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- STOCK DETAILS -->
+<!-- ========================================= -->
+
+<div
+    class="view"
+    data-view="stock"
+>
+
+    <div class="page">
+
+        <div class="page-header">
+
+            <button
+                id="backButton"
+                class="btn"
+            >
+
+                ← Back
+
+            </button>
+
+            <h2 id="stockTitle">
+
+                Loading...
+
+            </h2>
+
+            <p id="stockCompany"></p>
+
+        </div>
+
+        <div id="stockContent">
+
+            <!-- Top Cards -->
+
+            <div class="grid two">
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        CURRENT PRICE
+
+                    </div>
+
+                    <div
+                        class="card-value"
+                        id="stockPrice"
+                    >
+
+                        --
+
+                    </div>
+
+                    <div
+                        class="card-subtitle"
+                        id="stockChange"
+                    >
+
+                        --
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        GANN LEVELS
+
+                    </div>
+
+                    <div class="card-subtitle">
+
+                        Support:
+                        <strong id="supportPrice">
+
+                            --
+
+                        </strong>
+
+                    </div>
+
+                    <div class="card-subtitle">
+
+                        Resistance:
+                        <strong id="resistancePrice">
+
+                            --
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <button
+                id="createAlertBtn"
+                class="btn btn-primary"
+            >
+
+                Create Alert
+
+            </button>
+
+            <br><br>
+
+            <!-- OHLC -->
+
+            <div class="grid three">
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        OPEN
+
+                    </div>
+
+                    <div
+                        class="card-value"
+                        id="openPrice"
+                    >
+
+                        --
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        HIGH
+
+                    </div>
+
+                    <div
+                        class="card-value"
+                        id="highPrice"
+                    >
+
+                        --
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        LOW
+
+                    </div>
+
+                    <div
+                        class="card-value"
+                        id="lowPrice"
+                    >
+
+                        --
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- DOCK -->
+<!-- ========================================= -->
+
+<nav class="dock">
+
+    <div class="dock-pill"></div>
+
+    <!-- Home -->
+
+    <button
+        class="nav-item active"
+        data-view="home"
+    >
+
+        <svg viewBox="0 0 24 24">
+
+            <path d="M3 10.5L12 3l9 7.5"/>
+
+            <path d="M5 9.5V21h14V9.5"/>
+
+        </svg>
+
+    </button>
+
+    <!-- Watchlist -->
+
+    <button
+        class="nav-item"
+        data-view="watchlist"
+    >
+
+        <svg viewBox="0 0 24 24">
+
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+
+        </svg>
+
+    </button>
+
+    <!-- Alerts -->
+
+    <button
+        class="nav-item"
+        data-view="alerts"
+    >
+
+        <svg viewBox="0 0 24 24">
+
+            <path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8"/>
+
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+
+        </svg>
+
+    </button>
+
+    <!-- Account -->
+
+    <button
+        class="nav-item"
+        data-view="account"
+    >
+
+        <svg viewBox="0 0 24 24">
+
+            <circle
+                cx="12"
+                cy="8"
+                r="4"
+            />
+
+            <path d="M5 21c0-4 3-7 7-7s7 3 7 7"/>
+
+        </svg>
+
+    </button>
+
+</nav>
+
+</main>
+
+<!-- ========================================= -->
+<!-- SCRIPTS -->
+<!-- ========================================= -->
+
+<script src="/js/api.js"></script>
+
+<script src="/js/auth.js"></script>
+
+<script src="/js/watchlist.js"></script>
+
+<script src="/components/background.js"></script>
+
+<script src="/components/navbar.js"></script>
+
+<script src="/components/search.js"></script>
+
+<script src="/components/dashboard.js"></script>
+
+<script src="/components/alerts.js"></script>
+
+<script
+    type="module"
+    src="/script.js"
+></script>
 
 </body>
 
