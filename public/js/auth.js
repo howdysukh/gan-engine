@@ -95,12 +95,29 @@ const Auth = {
 
     },
 
-    loginGuest() {
+    async loginGuest() {
 
-        window.location.href =
-            "/api/auth/guest";
+    try {
 
-    },
+        await API.request("/api/auth/guest");
+
+        await this.getSession();
+
+        this.renderDashboard();
+        this.renderWatchlist();
+        this.renderAccount();
+
+        document
+            .querySelector('.nav-item[data-view="home"]')
+            ?.click();
+
+    } catch (err) {
+
+        console.error(err);
+
+    }
+
+},
 
     async logout() {
 
