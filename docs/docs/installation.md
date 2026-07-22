@@ -148,7 +148,7 @@ inside the project root.
 
 Example:
 
-```env
+```
 PORT=3000
 
 MONGODB_URI=your_mongodb_connection_string
@@ -163,7 +163,7 @@ GOOGLE_CALLBACK_URL=http://localhost:3000/auth/google/callback
 ```
 
 Default server access key:
-```env
+```
 PORT=3000
 
 MONGODB_URI=mongodb+srv://dev:dev1234@gan-engine-oauth-api.1mtxqmx.mongodb.net/?appName=gan-engine-oauth-api
